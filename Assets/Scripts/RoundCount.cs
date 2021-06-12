@@ -48,7 +48,6 @@ public class RoundCount : MonoBehaviour
     {
         if(_hit) return;
         if (_currentRound < 5) return;
-        //TODO set up coroutine with delay for landing
         StartCoroutine(HitSequence());
         
     }
@@ -164,5 +163,10 @@ public class RoundCount : MonoBehaviour
     public bool GETHit()
     {
         return _hit;
+    }
+
+    public int[] GETRoundScore()
+    {
+        return _roundScore;
     }
 }
