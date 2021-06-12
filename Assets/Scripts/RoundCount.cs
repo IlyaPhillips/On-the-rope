@@ -15,6 +15,7 @@ public class RoundCount : MonoBehaviour
     private int _rounds;
     private int _roundResult;
     private bool _combat;
+    private bool _hit;
 
     private void Awake()
     {
@@ -35,28 +36,31 @@ public class RoundCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (_combat && _currentRound <5)
-        {
-            
-            //foreach round start
-            CheckMoves();
-            CheckResult(_move1,_move2);
-            _roundScore[_currentRound] = _winState;
-            _combat = false;
-            //for each round end
-            
-            
-            _controller1.keyInput = false;
-            _controller2.keyInput = false;
-        }
+        if (_hit) return;
+        if (!_combat || _currentRound >= 5) return;
+        CheckMoves();
+        CheckResult(_move1, _move2);
+        _roundScore[_currentRound] = _winState;
+        _combat = false;
+    }
 
-        if (_currentRound >=5)
-        {
-            EvaluateLoser();
-            KnockbackLoser();
-            _currentRound = 0;
-        }
+    private void FixedUpdate()
+    {
+        if(_hit) return;
+        if (_currentRound < 5) return;
+        //TODO set up coroutine with delay for landing
+        StartCoroutine(HitSequence());
+        
+    }
+
+    private IEnumerator HitSequence()
+    {
+        EvaluateLoser();
+        KnockbackLoser();
+        _hit = true;
+        yield return new WaitForSeconds(2);
+        _hit = false;
+        _currentRound = 0;
     }
 
     private void EvaluateLoser()
@@ -152,13 +156,13 @@ public class RoundCount : MonoBehaviour
         _currentRound = round;
     }
 
-    public bool GETCombat()
-    {
-        return _combat;
-    }
-
     public void SetCombat(bool combat)
     {
         _combat = combat;
+    }
+
+    public bool GETHit()
+    {
+        return _hit;
     }
 }

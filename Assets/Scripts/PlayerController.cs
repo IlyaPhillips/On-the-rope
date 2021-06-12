@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
 
     private PlayerControls _controls2;
     private int _lastMove;
-    public bool keyInput;
 
     // Start is called before the first frame update
     private void Awake()
@@ -35,22 +34,6 @@ public class PlayerController : MonoBehaviour
 
     private void SendMove(int move)
     {
-        keyInput = true;
-        // switch (move)
-        // {
-        //     case 1:
-        //         Debug.Log("Rock");
-        //         break;
-        //     case 2:
-        //         Debug.Log("Paper");
-        //         break;
-        //     case 3:
-        //         Debug.Log("Scissors");
-        //         break;
-        //     default:
-        //         Debug.Log("Invalid Input");
-        //         break;
-        // }
         _lastMove = move;
     }
 
