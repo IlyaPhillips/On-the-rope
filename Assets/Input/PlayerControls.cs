@@ -19,9 +19,25 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             ""id"": ""9a609122-30b9-4ce9-9d99-ab7d871751f8"",
             ""actions"": [
                 {
-                    ""name"": ""Attacks"",
+                    ""name"": ""Rock"",
                     ""type"": ""Button"",
                     ""id"": ""a6f2dd1e-3bf2-4a31-8a41-e10ac98d4f62"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Paper"",
+                    ""type"": ""Button"",
+                    ""id"": ""f2a95436-ca2d-4838-8239-438e87108b9b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Scissors"",
+                    ""type"": ""Button"",
+                    ""id"": ""6cdfe734-d753-4609-9a78-b226ef983a09"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -43,29 +59,29 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Attacks"",
+                    ""action"": ""Rock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""df6db119-9f5d-4065-ad61-bb8f9fe8fcd2"",
+                    ""id"": ""18f601da-8b3c-449d-9ab7-ed2322262d73"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attacks"",
+                    ""action"": ""Paper"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e8e8157f-1cd9-4700-aa55-7df3255250cf"",
+                    ""id"": ""3e8bb571-cae9-4c3b-a094-2f7440b7f1ac"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attacks"",
+                    ""action"": ""Scissors"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -77,6 +93,90 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""PlayerTwo"",
+            ""id"": ""5e17c6c4-e71e-40f2-9ffe-b9c128b725aa"",
+            ""actions"": [
+                {
+                    ""name"": ""Rock"",
+                    ""type"": ""Button"",
+                    ""id"": ""039a0d8a-2e17-4d91-b2d6-7dd9c7741158"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Paper"",
+                    ""type"": ""Button"",
+                    ""id"": ""b57370e7-e3f3-4b6d-8034-07eb3274c9a3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Scissors"",
+                    ""type"": ""Button"",
+                    ""id"": ""c48146a4-6c23-433c-80d3-61df819e07b0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""753d0e9f-281f-44ba-854d-ea409c86b962"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""64b5a591-107e-4f1d-9d00-d41e5340e86a"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Rock"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed2c7400-b633-4354-aa22-97d02e9e2e46"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2855d7b-43ca-45f6-af63-a82a55264b94"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scissors"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a39659a7-3bb4-4ff4-b211-c1600f429803"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Paper"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -654,8 +754,16 @@ public class @PlayerControls : IInputActionCollection, IDisposable
 }");
         // PlayerOne
         m_PlayerOne = asset.FindActionMap("PlayerOne", throwIfNotFound: true);
-        m_PlayerOne_Attacks = m_PlayerOne.FindAction("Attacks", throwIfNotFound: true);
+        m_PlayerOne_Rock = m_PlayerOne.FindAction("Rock", throwIfNotFound: true);
+        m_PlayerOne_Paper = m_PlayerOne.FindAction("Paper", throwIfNotFound: true);
+        m_PlayerOne_Scissors = m_PlayerOne.FindAction("Scissors", throwIfNotFound: true);
         m_PlayerOne_Pause = m_PlayerOne.FindAction("Pause", throwIfNotFound: true);
+        // PlayerTwo
+        m_PlayerTwo = asset.FindActionMap("PlayerTwo", throwIfNotFound: true);
+        m_PlayerTwo_Rock = m_PlayerTwo.FindAction("Rock", throwIfNotFound: true);
+        m_PlayerTwo_Paper = m_PlayerTwo.FindAction("Paper", throwIfNotFound: true);
+        m_PlayerTwo_Scissors = m_PlayerTwo.FindAction("Scissors", throwIfNotFound: true);
+        m_PlayerTwo_Pause = m_PlayerTwo.FindAction("Pause", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -717,13 +825,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     // PlayerOne
     private readonly InputActionMap m_PlayerOne;
     private IPlayerOneActions m_PlayerOneActionsCallbackInterface;
-    private readonly InputAction m_PlayerOne_Attacks;
+    private readonly InputAction m_PlayerOne_Rock;
+    private readonly InputAction m_PlayerOne_Paper;
+    private readonly InputAction m_PlayerOne_Scissors;
     private readonly InputAction m_PlayerOne_Pause;
     public struct PlayerOneActions
     {
         private @PlayerControls m_Wrapper;
         public PlayerOneActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Attacks => m_Wrapper.m_PlayerOne_Attacks;
+        public InputAction @Rock => m_Wrapper.m_PlayerOne_Rock;
+        public InputAction @Paper => m_Wrapper.m_PlayerOne_Paper;
+        public InputAction @Scissors => m_Wrapper.m_PlayerOne_Scissors;
         public InputAction @Pause => m_Wrapper.m_PlayerOne_Pause;
         public InputActionMap Get() { return m_Wrapper.m_PlayerOne; }
         public void Enable() { Get().Enable(); }
@@ -734,9 +846,15 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_PlayerOneActionsCallbackInterface != null)
             {
-                @Attacks.started -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnAttacks;
-                @Attacks.performed -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnAttacks;
-                @Attacks.canceled -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnAttacks;
+                @Rock.started -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnRock;
+                @Rock.performed -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnRock;
+                @Rock.canceled -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnRock;
+                @Paper.started -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnPaper;
+                @Paper.performed -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnPaper;
+                @Paper.canceled -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnPaper;
+                @Scissors.started -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnScissors;
+                @Scissors.performed -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnScissors;
+                @Scissors.canceled -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnScissors;
                 @Pause.started -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerOneActionsCallbackInterface.OnPause;
@@ -744,9 +862,15 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             m_Wrapper.m_PlayerOneActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Attacks.started += instance.OnAttacks;
-                @Attacks.performed += instance.OnAttacks;
-                @Attacks.canceled += instance.OnAttacks;
+                @Rock.started += instance.OnRock;
+                @Rock.performed += instance.OnRock;
+                @Rock.canceled += instance.OnRock;
+                @Paper.started += instance.OnPaper;
+                @Paper.performed += instance.OnPaper;
+                @Paper.canceled += instance.OnPaper;
+                @Scissors.started += instance.OnScissors;
+                @Scissors.performed += instance.OnScissors;
+                @Scissors.canceled += instance.OnScissors;
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
@@ -754,6 +878,63 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         }
     }
     public PlayerOneActions @PlayerOne => new PlayerOneActions(this);
+
+    // PlayerTwo
+    private readonly InputActionMap m_PlayerTwo;
+    private IPlayerTwoActions m_PlayerTwoActionsCallbackInterface;
+    private readonly InputAction m_PlayerTwo_Rock;
+    private readonly InputAction m_PlayerTwo_Paper;
+    private readonly InputAction m_PlayerTwo_Scissors;
+    private readonly InputAction m_PlayerTwo_Pause;
+    public struct PlayerTwoActions
+    {
+        private @PlayerControls m_Wrapper;
+        public PlayerTwoActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Rock => m_Wrapper.m_PlayerTwo_Rock;
+        public InputAction @Paper => m_Wrapper.m_PlayerTwo_Paper;
+        public InputAction @Scissors => m_Wrapper.m_PlayerTwo_Scissors;
+        public InputAction @Pause => m_Wrapper.m_PlayerTwo_Pause;
+        public InputActionMap Get() { return m_Wrapper.m_PlayerTwo; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PlayerTwoActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerTwoActions instance)
+        {
+            if (m_Wrapper.m_PlayerTwoActionsCallbackInterface != null)
+            {
+                @Rock.started -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnRock;
+                @Rock.performed -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnRock;
+                @Rock.canceled -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnRock;
+                @Paper.started -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnPaper;
+                @Paper.performed -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnPaper;
+                @Paper.canceled -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnPaper;
+                @Scissors.started -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnScissors;
+                @Scissors.performed -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnScissors;
+                @Scissors.canceled -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnScissors;
+                @Pause.started -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerTwoActionsCallbackInterface.OnPause;
+            }
+            m_Wrapper.m_PlayerTwoActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Rock.started += instance.OnRock;
+                @Rock.performed += instance.OnRock;
+                @Rock.canceled += instance.OnRock;
+                @Paper.started += instance.OnPaper;
+                @Paper.performed += instance.OnPaper;
+                @Paper.canceled += instance.OnPaper;
+                @Scissors.started += instance.OnScissors;
+                @Scissors.performed += instance.OnScissors;
+                @Scissors.canceled += instance.OnScissors;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
+            }
+        }
+    }
+    public PlayerTwoActions @PlayerTwo => new PlayerTwoActions(this);
 
     // UI
     private readonly InputActionMap m_UI;
@@ -906,7 +1087,16 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     }
     public interface IPlayerOneActions
     {
-        void OnAttacks(InputAction.CallbackContext context);
+        void OnRock(InputAction.CallbackContext context);
+        void OnPaper(InputAction.CallbackContext context);
+        void OnScissors(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+    }
+    public interface IPlayerTwoActions
+    {
+        void OnRock(InputAction.CallbackContext context);
+        void OnPaper(InputAction.CallbackContext context);
+        void OnScissors(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
     }
     public interface IUIActions

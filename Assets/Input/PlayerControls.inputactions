@@ -6,9 +6,25 @@
             "id": "9a609122-30b9-4ce9-9d99-ab7d871751f8",
             "actions": [
                 {
-                    "name": "Attacks",
+                    "name": "Rock",
                     "type": "Button",
                     "id": "a6f2dd1e-3bf2-4a31-8a41-e10ac98d4f62",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Paper",
+                    "type": "Button",
+                    "id": "f2a95436-ca2d-4838-8239-438e87108b9b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Scissors",
+                    "type": "Button",
+                    "id": "6cdfe734-d753-4609-9a78-b226ef983a09",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -30,29 +46,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Attacks",
+                    "action": "Rock",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "df6db119-9f5d-4065-ad61-bb8f9fe8fcd2",
+                    "id": "18f601da-8b3c-449d-9ab7-ed2322262d73",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attacks",
+                    "action": "Paper",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "e8e8157f-1cd9-4700-aa55-7df3255250cf",
+                    "id": "3e8bb571-cae9-4c3b-a094-2f7440b7f1ac",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attacks",
+                    "action": "Scissors",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -64,6 +80,90 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "PlayerTwo",
+            "id": "5e17c6c4-e71e-40f2-9ffe-b9c128b725aa",
+            "actions": [
+                {
+                    "name": "Rock",
+                    "type": "Button",
+                    "id": "039a0d8a-2e17-4d91-b2d6-7dd9c7741158",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Paper",
+                    "type": "Button",
+                    "id": "b57370e7-e3f3-4b6d-8034-07eb3274c9a3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Scissors",
+                    "type": "Button",
+                    "id": "c48146a4-6c23-433c-80d3-61df819e07b0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "753d0e9f-281f-44ba-854d-ea409c86b962",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "64b5a591-107e-4f1d-9d00-d41e5340e86a",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Rock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed2c7400-b633-4354-aa22-97d02e9e2e46",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2855d7b-43ca-45f6-af63-a82a55264b94",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Scissors",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a39659a7-3bb4-4ff4-b211-c1600f429803",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Paper",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
