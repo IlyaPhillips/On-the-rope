@@ -11,6 +11,7 @@ public class ScoreUpdate : MonoBehaviour
     private Image[] _player1Scores, _player2Scores;
     private int _currentRound;
     private int [] _roundScores;
+    private bool _roundHit;
 
     private void Awake()
     {
@@ -29,10 +30,23 @@ public class ScoreUpdate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ;
+        //if(_roundHit && !roundCount.GETHit()) {Reset();}
         _roundScores = roundCount.GETRoundScore();
+        _roundHit = roundCount.GETHit();
         Player1Update();
         Player2Update();
     }
+
+    // private void Reset()
+    // {
+    //     for (var i = 0; i < _player1Scores.Length; i++)
+    //     {
+    //         _player1Scores[i].color = Color.white;
+    //         _player2Scores[i].color = Color.white;
+    //         
+    //     }
+    // }
 
     private void Player1Update()
     {
@@ -47,7 +61,7 @@ public class ScoreUpdate : MonoBehaviour
                     _player1Scores[i].color = Color.green;
                     break;
                 default:
-                    _player1Scores[i].color = Color.white;
+                    _player1Scores[i].color = Color.grey;
                     break;
             }
         }
@@ -67,7 +81,7 @@ public class ScoreUpdate : MonoBehaviour
                     _player2Scores[i].color = Color.red;
                     break;
                 default:
-                    _player2Scores[i].color = Color.white;
+                    _player2Scores[i].color = Color.grey;
                     break;
             }
         }

@@ -24,10 +24,10 @@ public class Rope : MonoBehaviour
         _line.SetPosition(0,playerPos);
         _line.SetPosition(1,oppPos);
         var dist = Vector2.Distance(playerPos, oppPos);
-        if (dist < 5)
+        if (dist < 8)
         {
-            _line.startWidth = 0.4f / dist;
-            _line.endWidth = 0.4f / dist;
+            _line.startWidth = 0.6f / dist;
+            _line.endWidth = 0.6f / dist;
         }
         else
         {

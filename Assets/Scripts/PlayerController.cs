@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private bool playerOne;
+    [SerializeField] private bool ai;
     private PlayerControls _controls1;
 
     private PlayerControls _controls2;
@@ -14,6 +16,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        _lastMove = Random.Range(1, 4);
+        if (ai) return;
         switch (playerOne)
         {
             case true:
@@ -39,11 +43,15 @@ public class PlayerController : MonoBehaviour
 
     public int GETLastMove()
     {
-        return _lastMove;
+        var aiMove = Random.Range(1, 4);
+        if(ai) print(aiMove);
+        return !ai ? _lastMove : aiMove;
+        //|| _lastMove ==0 
     }
 
     private void OnEnable()
     {
+        if (ai) return;
         switch (playerOne)
         {
             case (true):
@@ -57,6 +65,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
     {
+        if (ai) return;
         switch (playerOne)
         {
             case (true):

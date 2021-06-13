@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class RoundCount : MonoBehaviour
 {
@@ -41,6 +43,13 @@ public class RoundCount : MonoBehaviour
         CheckMoves();
         CheckResult(_move1, _move2);
         _roundScore[_currentRound] = _winState;
+        StartCoroutine(CombatSwitch());
+
+    }
+
+    IEnumerator CombatSwitch()
+    {
+        yield return new WaitForEndOfFrame();
         _combat = false;
     }
 
@@ -57,9 +66,18 @@ public class RoundCount : MonoBehaviour
         EvaluateLoser();
         KnockbackLoser();
         _hit = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.2f);
+        for(var i = 0; i<_roundScore.Length;i++)
+        {
+            _roundScore[i] = 0;
+        }
+        yield return new WaitForSeconds(0.6f);
         _hit = false;
         _currentRound = 0;
+        for(var i = 0; i<_roundScore.Length;i++)
+        {
+            _roundScore[i] = 0;
+        }
     }
 
     private void EvaluateLoser()
@@ -111,13 +129,13 @@ public class RoundCount : MonoBehaviour
             switch (move1)
             {
                 case 1:
-                    _winState = move2 == 2 ? 2 : 1;
+                    _winState = move2 == 2 ? 1 : 2;
                     break;
                 case 2:
-                    _winState = move2 == 3 ? 2 : 1;
+                    _winState = move2 == 3 ? 1 : 2;
                     break;
                 case 3:
-                    _winState = move2 == 1 ? 2 : 1;
+                    _winState = move2 == 1 ? 1 : 2;
                     break;
                 default:
                     Debug.Log("Invalid Input CheckResults");
@@ -131,8 +149,8 @@ public class RoundCount : MonoBehaviour
         switch (_roundResult)
         {
             case 0:
-                _player2Knock.ApplyKnockback();
-                _player1Knock.ApplyKnockback();
+                //_player2Knock.ApplyKnockback();
+                //_player1Knock.ApplyKnockback();
                 break;
             case 1:
                 _player2Knock.ApplyKnockback();
@@ -160,6 +178,11 @@ public class RoundCount : MonoBehaviour
         _combat = combat;
     }
 
+    public bool GETCombat()
+    {
+        return _combat;
+    }
+
     public bool GETHit()
     {
         return _hit;
@@ -168,5 +191,10 @@ public class RoundCount : MonoBehaviour
     public int[] GETRoundScore()
     {
         return _roundScore;
+    }
+
+    public int GETRoundResult()
+    {
+        return _roundResult;
     }
 }
